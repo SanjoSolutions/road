@@ -13,10 +13,14 @@ def main():
         return state
 
     state = new_game()
+    total_reward = 0
     while True:
         action = choose_action(road, state)
         state, reward, done = road.step(action)
+        total_reward += reward
         print_state(state)
+        print('Score:', total_reward)
+        print('')
         if done:
             print('Game over!')
             print('')

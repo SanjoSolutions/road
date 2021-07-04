@@ -97,4 +97,3 @@ def row_a_has_connections_to_row_b(row_a, row_b):
 def print_state(state):
     for row in state:
         print(row)
-    print('')
